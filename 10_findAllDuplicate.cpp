@@ -1,6 +1,19 @@
 class Solution {
 public:
     vector<int> findDuplicates(vector<int>& nums) {
+        //my first approach using hashmap
+class Solution {
+public:
+    vector<int> findDuplicates(vector<int>& nums) {
+        vector<int> ans;
+        unordered_map<int,bool> m;
+        for(int i:nums){
+            if(m[i]){ans.push_back(i);}
+            else{m[i]=1;}
+        }
+        return ans;
+    }
+};
         //using condition that arr[i] is in range 1 to n
         vector<int> ans;
         for(int i:nums){
