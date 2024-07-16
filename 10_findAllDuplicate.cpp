@@ -15,6 +15,7 @@ public:
     }
 };
         //using condition that arr[i] is in range 1 to n
+        //we have to do the two things at the same time , one int but two values stored at the same time , firstly it stored its value and secondly it stored visited or not using *=-1;
         vector<int> ans;
         for(int i:nums){
             if(nums[abs(i)-1]<0){
